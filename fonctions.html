@@ -6,7 +6,32 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <h1>Yo</h1> -->
+    <script>
+        function suiteParlee() {
+          const suite = prompt('Suite à convertir ?');
+    
+          if (!suite || suite.length % 2 === 1) {
+            console.error('La suite doit contenir un nombre pair de caractères');
+            return;
+          }
+    
+          let resultat = '';
+    
+          for (let i = 0; i < suite.length; i += 2) {
+            const nombre = parseInt(suite[i], 10);
+            const chiffre = suite[i + 1];
+    
+            if (nombre === 0) {
+              continue;
+            }
+    
+            resultat += chiffre.repeat(nombre);
+          }
+    
+          console.log(resultat || 'La suite ne produit aucune répétition.');
+        }
+    
+        suiteParlee();
+      </script>
 </body>
-<script src="./02_fonctions.js"></script>
 </html>

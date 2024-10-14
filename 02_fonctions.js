@@ -27,8 +27,8 @@ console.log(maStruct.a)//affiche 2, ca ne marche pas avec la fonction anonyme fl
 maStruct.ajouter2AAbis();
 console.log(maStruct.a) // affiche 4
 
-
-
+// Les fonctions anonymes ne sont pas pré-déclarées
+// On ne peut pas les appeler avant leur déclaration
 
 
 

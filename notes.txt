@@ -1,0 +1,5 @@
+Décomposition des problèmes : Toujours décomposer un problème complexe en sous-problèmes plus petits et plus simples à résoudre. Cela te permet de gérer chaque étape indépendamment.
+
+Pense aux tests : Il est important d'envisager des tests avec différentes entrées pour voir comment ton algorithme se comporte. Par exemple, teste des cas extrêmes comme une chaîne vide, une chaîne avec des zéros, ou des paires avec de grands nombres.
+
+Maîtriser les types et les comparaisons : Comprendre les différences entre == et === ou encore les conversions de types est essentiel en JavaScript. Prends l'habitude d'utiliser === pour éviter des comportements inattendus.

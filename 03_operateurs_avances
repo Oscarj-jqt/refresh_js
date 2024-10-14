@@ -1,0 +1,47 @@
+//hoisting ou élévation des variables
+// --> variables accessibles avant leur déclaration
+console.log(a); // undefined
+var a = 2;
+console.log(a); // 2
+
+// L'opérateur ?? renvoie la première valeur qui n'est ni null ni undefined. 
+// Cela permet de définir des valeurs par défaut lorsque les variables peuvent ne pas être initialisées.
+console.log(b ?? 'Pas encore défini'); // Pas encore défini
+var b = 2;
+console.log(b ?? 'Pas encore défini'); // 2
+
+
+const maStruct = {
+  a: 2,
+  b: {
+    c: 'aa',
+  },
+};
+const maStruct2 = {
+  a: 6,
+  f: 'oui',
+  d: {
+    c: 'aa',
+  },
+};
+
+// L'opérateur optionnel ?. permet de vérifier si un objet ou une propriété existe avant d'y accéder. 
+// Si l'objet ou la propriété n'existe pas, il renvoie undefined au lieu de déclencher une erreur.
+console.log(maStruct.b.c) // 'aa'
+console.log(maStruct.d) // undefined
+console.log(maStruct?.d?.c) // undefined
+console.log(maStruct?.d?.c ?? 'L\'un des éléments de la chaine n\'existe pas') // L'un des éléments de la chaine n'existe pas
+console.log(maStruct2?.d?.c ?? 'L\'un des éléments de la chaine n\'existe pas') // aa
+// console.log(maStruct.d.c) // ERREUR
+
+
+// L'opérateur ?. peut également être utilisé pour accéder à des éléments dans un tableau sans risquer de déclencher une erreur si l'index est hors des limites.
+const monTableau = [
+  { prenom: 'Damien'},
+  { prenom: 'Brontis'},
+  { prenom: 'Christelle'},
+];
+console.log(monTableau[0].prenom); // 1
+console.log(monTableau[1].prenom); // 2
+console.log(monTableau[2].prenom); // 3
+console.log(monTableau?.[3]?.prenom); // undefined
