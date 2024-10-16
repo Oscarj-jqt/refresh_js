@@ -3,3 +3,45 @@ Décomposition des problèmes : Toujours décomposer un problème complexe en so
 Pense aux tests : Il est important d'envisager des tests avec différentes entrées pour voir comment ton algorithme se comporte. Par exemple, teste des cas extrêmes comme une chaîne vide, une chaîne avec des zéros, ou des paires avec de grands nombres.
 
 Maîtriser les types et les comparaisons : Comprendre les différences entre == et === ou encore les conversions de types est essentiel en JavaScript. Prends l'habitude d'utiliser === pour éviter des comportements inattendus.
+
+Exercice - Gestionnnaire
+
+1. Modélisation des utilisateurs :
+Crée une classe Utilisateur avec des propriétés comme :
+nom (string)
+role (string, par exemple "user" ou "admin")
+actif (boolean pour savoir si l'utilisateur est activé/désactivé)
+adresse (objet contenant des champs comme rue, ville, etc.)
+2. Ajout de méthodes pour les utilisateurs :
+Crée une méthode dans ta classe Utilisateur pour activer/désactiver un utilisateur :
+Exemple : setActive(status) qui prend un booléen en paramètre et change l'état d'activation de l'utilisateur.
+Crée une méthode pour passer un utilisateur de simple user à admin ou inversement :
+Exemple : changerRole().
+3. Gestion des administrateurs :
+Crée une sous-classe Administrateur qui hérite de la classe Utilisateur (ou ajoute une propriété isAdmin dans la classe Utilisateur pour simplifier).
+Les administrateurs ont des fonctionnalités supplémentaires : ils peuvent voir une liste de tous les utilisateurs.
+4. Affichage de la liste des utilisateurs :
+Si l'utilisateur est un administrateur, affiche une liste de tous les utilisateurs :
+Pour chaque utilisateur dans cette liste, affiche :
+Le nom
+Le rôle
+Un bouton pour passer l'utilisateur de user à admin (ou inversement)
+Une checkbox pour activer/désactiver l'utilisateur
+5. Implémentation de la gestion des rôles et de l'activation :
+Ajoute un bouton dans l'interface (HTML si tu travailles en front-end) pour chaque utilisateur qui permet de changer son rôle entre user et admin. Le bouton doit être cliquable et exécuter une méthode pour changer le rôle.
+Ajoute une checkbox qui permet de cocher/décocher l'utilisateur comme étant "actif". Si la checkbox est décochée, l'utilisateur doit être désactivé et ne plus pouvoir accéder à son profil.
+6. Fonctionnalité bonus :
+Blocage d'accès pour les utilisateurs désactivés :
+Vérifie l'état de la propriété actif avant de permettre l'accès au profil d'un utilisateur. Si actif est false, bloque l'accès au profil (par exemple, redirige l'utilisateur vers une page d'erreur).
+7. Gestion des adresses :
+Ajoute une propriété adresse dans la classe Utilisateur, qui sera un objet contenant :
+rue (string)
+ville (string)
+codePostal (string)
+Crée une méthode pour afficher l'adresse sous forme de chaîne formatée (ex : "12 Rue de la République, Paris 75000").
+Permets aux administrateurs de gérer (modifier) les adresses des utilisateurs.
+8. Tests :
+Crée plusieurs instances d'utilisateurs, dont certains sont administrateurs, et assure-toi que :
+Les administrateurs peuvent voir la liste des utilisateurs et gérer leurs rôles et statuts.
+Les utilisateurs désactivés ne peuvent pas accéder à leurs profils.
+Les adresses peuvent être affichées et modifiées par les administrateurs.

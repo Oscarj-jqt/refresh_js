@@ -45,3 +45,10 @@ console.log(monTableau[0].prenom); // 1
 console.log(monTableau[1].prenom); // 2
 console.log(monTableau[2].prenom); // 3
 console.log(monTableau?.[3]?.prenom); // undefined
+
+
+const coll = [1,2,3,4];
+//... pour ajouter des éléments comme .push(avec les tableaux, objets...)
+const coll2 = [...coll, 5];
+
+console.log(coll2)
